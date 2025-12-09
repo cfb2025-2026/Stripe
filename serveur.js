@@ -39,4 +39,7 @@ app.post('/create-checkout-session', async (req, res) => {
   }
 });
 
-app.listen(process.env.STRIPE_PORT, () => console.log('Server running on port', process.env.STRIPE_PORT));
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => {
+  console.log(`Server Stripe running on port ${PORT}`);
+});
